@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;0,700;1,400&family=Poppins:wght@700&display=swap");
+
+:root {
+  --padding-container: 100px 0;
+  --font-sans: "Open Sans", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --pink: hsl(322, 100%, 66%);
+  --light-pink: hsl(321, 100%, 78%);
+  --light-red: hsl(0, 100%, 63%);
+  --very-dark-cyan: hsl(192, 100%, 9%);
+  --very-pale-blue: hsl(207, 100%, 98%);
+  --very-pale-cyan: hsl(193, 100%, 96%);
+  --grayish-blue: hsl(208, 11%, 55%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  overflow: hidden;
+  max-width: 1200px;
+  padding: var(--padding-container);
+}
+
+.hero {
+  padding: 0 0 30px 0;
+  background-image: url(../images/bg-hero-mobile.svg);
+  background-size: cover;
+  background-position: center;
+  background-color: var(--very-pale-cyan);
+}
+
+.hero__main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.nav {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.nav__logo {
+  width: 100%;
+  max-width: 150px;
+  display: block;
+}
+
+.nav__cta {
+  margin-right: 4px;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  color: var(--very-dark-cyan);
+  font-weight: 700;
+  background-color: var(--very-pale-blue);
+  border-radius: 30px;
+  box-shadow: 0 0 10px -3px hsl(192 100% 9% /0.2);
+}
+
+.hero__texts {
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-poppins);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero__paragraph {
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+
+.button {
+  padding: 0.7rem 2.8rem;
+  display: inline-block;
+  border-radius: 25px;
+  background-color: var(--pink);
+  color: var(--very-pale-cyan);
+  text-decoration: none;
+  box-shadow: 0 0 6px hsl(195, 100%, 9%, 0.3);
+}
+
+.hero__img {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+.section__container {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  box-shadow: 0 0 4px hsl(195, 100%, 9%, 0.3);
+  border-radius: 8px;
+  padding: 2rem 1rem;
+}
+
+.section__img {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+.section__texts {
+  text-align: center;
+}
+
+.section__paragraph {
+  margin: 0 auto;
+  line-height: 1.5;
+  color: var(--grayish-blue);
+}
+
+.section__title {
+  color: var(--very-dark-cyan);
+  font-size: 1.8rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 70px;
+}
+
+.email {
+  padding: var(--padding-container);
+  background-image: linear-gradient(to bottom,
+      #fff 50%,
+      var(--very-dark-cyan) 50%);
+}
+
+.email__container {
+  padding: 3rem 2rem;
+  max-width: 700px;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 3px hsl(195, 100%, 9%, 0.3);
+}
+
+.email__title {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-family: var(--font-poppins);
+}
+
+.footer {
+  background-color: var(--very-dark-cyan);
+  color: white;
+}
+
+.footer_paragraph {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.footer__icon {
+  position: relative;
+  top: 4px;
+}
+
+.footer__directions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer__list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer__list--left {
+  margin: 30px 0 20px;
+}
+
+.footer__link {
+  color: white;
+  text-decoration: none;
+}
+
+.footer__logo {
+  margin-bottom: 30px;
+  max-width: 300px;
+  display: block;
+}
+
+.footer__contact {
+  margin-top: 30px;
+  text-align: center;
+  gap: 10px;
+}
+
+.footer__socialmedia {
+  display: flex;
+}
+
+.footer__media {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid white;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__copy {
+  margin-top: 30px;
+}
+
+@media (min-width: 768px)
+/* this is the Media Quri part start points   */
+  {
+  .hero {
+    background-image: url(../images/bg-hero-desktop.svg);
+  }
+
+  .hero__main {
+    flex-direction: row;
+    align-items: center;
+    gap: 70px;
+  }
+
+  .hero__figure {
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero__title {
+    font-size: 2.5rem;
+  }
+
+  .nav__logo {
+    max-width: 180px;
+  }
+
+  .nav__cta {
+    padding: 0.8rem 3.5rem;
+  }
+
+  .hero__texts {
+    text-align: left;
+    width: 50%;
+    height: max-content;
+  }
+
+  .title {
+    font-family: var(--font-poppins);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero__img {
+    /* unset returns the property to its original value  */
+    max-width: unset;
+  }
+
+  .section__container {
+    flex-direction: row-reverse;
+    gap: 5em;
+    align-items: center;
+    padding: 5rem;
+  }
+
+  .section--reverse {
+    flex-direction: row;
+  }
+
+  .section__texts {
+    text-align: left;
+  }
+
+  .section__texts h2 {
+    padding-bottom: 1rem;
+    text-align: left;
+  }
+
+  .section__img {
+    max-width: 600px;
+  }
+
+  .main {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .email {
+    padding: var(--padding-container);
+    background-image: linear-gradient(to bottom,
+        #fff 50%,
+        var(--very-dark-cyan) 50%);
+  }
+
+  .email__container {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 3px hsl(195, 100%, 9%, 0.3);
+  }
+
+  .email__title {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-family: var(--font-poppins);
+  }
+
+  .footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+  }
+
+  .footer__figure {
+    width: 100%;
+  }
+
+  .footer__directions {
+    width: min-content;
+  }
+
+  .footer__list {
+    padding: 0;
+    width: max-content;
+  }
+
+  .footer__list--left {
+    margin: 0;
+  }
+
+  .footer__logo {
+    margin-bottom: 0;
+  }
+
+  .footer__contact {
+    margin-top: 0;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__socialmedia {
+    justify-content: flex-start;
+  }
+
+  .footer__media {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid white;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer__copy {
+    margin-top: auto;
+    font-size: 0.8rem;
+  }
+}
+
+/* this is the Media Quri part End points   */
